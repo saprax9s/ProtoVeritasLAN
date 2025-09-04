@@ -1,6 +1,6 @@
 🛡️ Veritas Protocol Documentation
 Autonomous, Multi-File, Merkle-Verified Transmission System
-Architected by Adithya & Copilot
+
 📦 Folder Structure
 Code
 veritas_protocol/
@@ -80,4 +80,7 @@ Download URL: http://10.203.4.229:5000/download/sample.pdf
 •	Expiry logic for hosted files
 •	Public server deployment with domain + HTTPS
 •	Chunk encryption with identity-bound keys
+
+
+note: it's a fun little night motivation projects completely done using AI and basic python
 
