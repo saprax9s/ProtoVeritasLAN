@@ -82,5 +82,44 @@ Download URL: http://10.203.4.229:5000/download/sample.pdf
 •	Chunk encryption with identity-bound keys
 
 
+
+
+🔍 Veritas Demo Suite
+The demo/ folder contains an isolated sandbox for inspecting the core cryptographic flow of the Veritas protocol — no transmission, no manifest, just pure hashcraft.
+
+📁 Structure
+Code
+demo/
+├── demo_encode.py       # Chunk, hash, build Merkle tree, print breakdown
+├── demo_verify.py       # Re-chunk, re-hash, rebuild tree, compare root
+├── file_processor.py    # Chunking logic
+├── hasher.py            # SHA-256 chunk hashing
+├── merkle_tree.py       # Merkle root + level builder
+├── demo_data/           # Drop test files here
+⚙️ How to Use
+Drop a file into demo/demo_data/ (e.g. sample.pdf)
+
+Run the encoder:
+
+bash
+python demo/demo_encode.py
+→ This prints chunk hashes, Merkle tree levels, and the final root
+
+Run the verifier:
+
+bash
+python demo/demo_verify.py
+→ Paste the expected Merkle root when prompted → It reconstructs the tree and verifies integrity
+
+🧠 Why It Exists
+This suite is designed for:
+
+Debugging and inspecting Merkle anatomy
+
+Teaching and onboarding new contributors
+
+Verifying file integrity without full protocol setup
+
+
 note: it's a fun little night motivation projects completely done using AI and basic python
 
